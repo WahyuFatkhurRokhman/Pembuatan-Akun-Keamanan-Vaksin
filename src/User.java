@@ -8,7 +8,7 @@ public class User {
     }
 
     public void tampilkanUser() {
-        System.out.println("User ID: " + userId);
-        System.out.println("Nama: " + nama);
+        System.out.println("User ID         : " + userId);
+        System.out.println("Nama            : " + nama);
     }
 }

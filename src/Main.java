@@ -8,12 +8,17 @@ public class Main {
         cal.set(2000, Calendar.JUNE, 7);
         Date tanggalLahir = cal.getTime();
 
-        Akun akun = new Akun("U001", "Budi Santoso", "budi123", "pass123");
-        DataPribadi dataPribadi = new DataPribadi("U001", "Budi Santoso", "budi@example.com", "Jakarta", "Lajang", tanggalLahir , 123456789);
-        Instansi instansi = new Instansi("U001", "Budi Santoso", "Universitas XYZ", "Jawa Barat", "Bandung", "Cibiru", "Jl. Pendidikan No. 1");
+        AkunPrioritas akunPrioritas = new AkunPrioritas("alukard", "alukard123", 123456);
+        AkunReguler akunReguler = new AkunReguler("nana", "nana123");
 
-        System.out.println("=== Informasi Akun ===");
-        akun.tampilkanAkun();
+        DataPribadi dataPribadi = new DataPribadi("212", "alukard dingin", "alukard@gmail.com", "Jakarta", "Lajang", tanggalLahir , 621124589);
+        Instansi instansi = new Instansi("212", "alukard dingin", "Puskesmas", "DKI Jakarta", "Jakarta Timur", "Cakung", "JatiNegara", "Jl. Raya Bekasi KM no.20, RT.5/RW.11");
+
+        System.out.println("=== Informasi Akun Prioritas ===");
+        akunPrioritas.tampilkanAkun();
+
+        System.out.println("\n=== Informasi Akun Reguler ===");
+        akunReguler.tampilkanAkun();
 
         System.out.println("\n=== Informasi Data Pribadi ===");
         dataPribadi.tampilkanDataPribadi();

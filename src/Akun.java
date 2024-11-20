@@ -1,9 +1,8 @@
-class Akun extends User {
+class Akun {
     private final String username;
     private String password;
 
-    public Akun(String userId, String nama, String username, String password) {
-        super(userId, nama);
+    public Akun(String username, String password) {
         this.username = username;
         this.password = password;
     }
@@ -17,8 +16,7 @@ class Akun extends User {
     }
 
     public void tampilkanAkun() {
-        tampilkanUser();
-        System.out.println("Username: " + username);
-        System.out.println("Password: " + password);
+        System.out.println("Username    : " + username);
+        System.out.println("Password    : " + password);
     }
 }
