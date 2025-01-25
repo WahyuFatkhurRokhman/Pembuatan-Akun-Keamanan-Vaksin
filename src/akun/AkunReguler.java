@@ -1,7 +1,6 @@
 package akun;
 
 public class AkunReguler extends Akun {
-
     public AkunReguler(String username, String password) {
         super(username, password);
     }

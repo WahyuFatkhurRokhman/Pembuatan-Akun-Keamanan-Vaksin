@@ -1,9 +1,13 @@
-import java.util.Date;
+import akun.AkunPrioritas;
+import akun.AkunReguler;
+import data.DataPenduduk;
+import instansi.Puskesmas;
+
 import java.util.Calendar;
+import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-
         Calendar cal = Calendar.getInstance();
         cal.set(2000, Calendar.JUNE, 7);
         Date tanggalLahir = cal.getTime();
@@ -11,8 +15,8 @@ public class Main {
         AkunPrioritas akunPrioritas = new AkunPrioritas("alukard", "alukard123", 123456);
         AkunReguler akunReguler = new AkunReguler("nana", "nana123");
 
-        DataPribadi dataPribadi = new DataPribadi("212", "alukard dingin", "alukard@gmail.com", "Jakarta", "Lajang", tanggalLahir , 621124589);
-        Instansi instansi = new Instansi("212", "alukard dingin", "Puskesmas", "DKI Jakarta", "Jakarta Timur", "Cakung", "JatiNegara", "Jl. Raya Bekasi KM no.20, RT.5/RW.11");
+        DataPenduduk dataPenduduk = new DataPenduduk("Alukard", 23, "alukard@gmail.com", "Jakarta", "Lajang", tanggalLahir, 621124589);
+        Puskesmas puskesmas = new Puskesmas("Puskesmas Kalirungkut", "Rungkut Puskesmas No.1", "Kali Rungkut", "Rungkut", "Surabaya", "Jawa Timur");
 
         System.out.println("=== Informasi Akun Prioritas ===");
         akunPrioritas.tampilkanAkun();
@@ -20,10 +24,10 @@ public class Main {
         System.out.println("\n=== Informasi Akun Reguler ===");
         akunReguler.tampilkanAkun();
 
-        System.out.println("\n=== Informasi Data Pribadi ===");
-        dataPribadi.tampilkanDataPribadi();
+        System.out.println("\n=== Informasi Penduduk ===");
+        dataPenduduk.tampilkanPenduduk();
 
         System.out.println("\n=== Informasi Instansi ===");
-        instansi.tampilkanInstansi();
+        puskesmas.tampilkanInfo();
     }
 }
